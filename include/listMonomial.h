@@ -19,6 +19,5 @@ struct listMonomial
 	Monomial monomial;
 	listMonomial* next;
 	listMonomial() : next(nullptr) { }
-	listMonomial(listMonomial*& next) : next(next) { }
 	listMonomial(Monomial monomial) : next(nullptr), monomial(monomial) { }
 };
