@@ -21,11 +21,19 @@ private:
 	}
 
 public:
-
 	Queue() { }
 	Queue(const Queue& s) = delete;
 	~Queue() { }
-
+	size_t length() const noexcept
+	{
+		return s1.length() + s2.length();
+	}
+	void clear()
+	{
+		s1.clear();
+		s2.clear();
+		return;
+	}
 	void push(const T& item)
 	{
 		s1.push(item);
